@@ -18,7 +18,9 @@
       url: '/',
       controller: 'loginController',
       controllerAs: 'loginCtlr',
-      templateUrl: 'app/components/login/loginView.html',
+      views: {
+         viewA:{ templateUrl: '/components/login/loginView.html' } ,
+      },
       resolve: {
         requireNoAuth: function($state, Auth) {
           return Auth.$requireAuth().then(function(auth) {
