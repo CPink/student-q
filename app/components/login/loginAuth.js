@@ -1,15 +1,15 @@
-(function(){
+(function () {
     'use strict';
-    
+
     angular
         .module('studentQ')
-        .factory('Auth', Auth); 
-        
-        
-   function Auth($firebaseAuth, FirebaseUrl) {
-            var ref = new Firebase(FirebaseUrl);
-            var auth = $firebaseAuth(ref);
+        .factory('loginAuth', loginAuth);
 
-            return auth;
-   }
+
+    function loginAuth($firebaseAuth, FirebaseUrl) {
+        var ref = new Firebase(FirebaseUrl);
+        var auth = $firebaseAuth(ref);
+
+        return auth;
+    }
 })();
