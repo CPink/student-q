@@ -34,15 +34,15 @@
                     controller: 'queController',
                     controllerAs: 'queCtlr',
                     templateUrl: '/app/components/que/queView.html',
-                    resolve: {
-                        requireNoAuth: function ($state, Auth) {
-                            return Auth.$requireAuth().then(function (auth) {
-                                $state.go('login');
-                            }, function (error) {
-                                return;
-                            });
-                        }
-                    }
+                    // resolve: {
+                    //     requireNoAuth: function ($state, Auth) {
+                    //         return Auth.$requireAuth().then(function (auth) {
+                    //             $state.go('login');
+                    //         }, function (error) {
+                    //             return;
+                    //         });
+                    //     }
+                    // }
                 })
             $urlRouterProvider.otherwise('/');
         })
