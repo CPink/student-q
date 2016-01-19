@@ -17,26 +17,22 @@
         //login method to be called from our controller. The callback is then passed the authenticated user
         //TO DO: refactor below functions to reduce how much is duplicated
         this.login = function (user, cb) {
-		firebaseLogin.authAnonymously(
-			function (err, authData) {
-				// var _number = 0;
-				// var _name = "Anonymous" + _number;
-				// var _username = function(){
-				// 	_number += Math.random();
-				// 	return _name;
-				// }
-				if (authData) {
-					//TO DO add/create an anonymous username generator
-					authData.username = "testing";
-					authData.timestamp = Date.now();
-					firebaseLogin.child('users').child(authData.uid).set(authData);
-					console.log(authData.username);
-					cb(authData);
-				} else {
-					console.log('something went wrong');
-					cb(authData);
-				}
-			});
-       }
+            firebaseLogin.authAnonymously(function (err, authData) {
+                if (authData) {
+                    authData.user = authData.user || {}
+                    //TO DO add/create an anonymous username generator
+                    authData.user.email = user.email;
+                    authData.user.username = user.email.substr(0, user.email.indexOf('@'))
+                    authData.user.question = user.question;
+                    authData.timestamp = Date.now();
+                    firebaseLogin.child('user').child(authData.user.username).set(authData);
+                    console.log(authData.username);
+                    cb(authData);
+                } else {
+                    console.log('something went wrong');
+                    cb(authData);
+                }
+            });
+        }
     }
 })();
