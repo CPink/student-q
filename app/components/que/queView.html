@@ -1,3 +1,21 @@
-<div class="container">
-    
+<div>
+    <md-content class="md-padding" layout="row" layout-wrap layout-align="center start" layout-xs="column">
+        <div flex="50" flex-sm="100" flex-xs="100" layout="column" class="layout-column flex-xs-100 flex-sm-100 flex-50">
+            <md-card id="cardColor" ng-repeat="question in queCtrl.questions">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">{{question.username}}</span>
+                        <span class="md-subhead">{{question.question}}</span>
+                    </md-card-title-text>
+                    <md-card-title-media>
+                        <div class="md-media-sm card-media"></div>
+                    </md-card-title-media>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button class="md-raised md-warn">Delete</md-button>
+                    <md-button class="md-raised md-primary">Help</md-button>
+                </md-card-actions>
+            </md-card>
+        </div>
+    </md-content>
 </div>

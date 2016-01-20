@@ -5,7 +5,8 @@
     angular
         .module('studentQ', [
             'ui.router',
-            'firebase'
+            'firebase',
+            'ngMaterial'
         ]) 
         
     // constant to keep from hardcoding firebaseUrl throughout site
@@ -17,7 +18,7 @@
                 .state('login', {
                     url: '/',
                     controller: 'loginController',
-                    controllerAs: 'loginCtlr',
+                    controllerAs: 'loginCtrl',
                     templateUrl: '/app/components/login/loginView.html',
                     // resolve: {
                     //     requireNoAuth: function ($state, Auth) {
@@ -32,7 +33,7 @@
                 .state('queView', {
                     url: '/queView',
                     controller: 'queController',
-                    controllerAs: 'queCtlr',
+                    controllerAs: 'queCtrl',
                     templateUrl: '/app/components/que/queView.html',
                     // resolve: {
                     //     requireNoAuth: function ($state, Auth) {

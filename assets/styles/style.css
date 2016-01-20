@@ -1,3 +1,13 @@
 #bdColor{
     background-color: black;
+    background-image: url("../images/bcw2.png");
+    background-size: auto;
+}
+
+.card-media {
+  background-color: #999999; 
+  }
+  
+#cardColor{
+    background-color: whitesmoke;
 }

@@ -19,14 +19,13 @@
         this.login = function (user, cb) {
             firebaseLogin.authAnonymously(function (err, authData) {
                 if (authData) {
-                    authData.user = authData.user || {}
+                    authData.user = authData.user || {};
                     //TO DO add/create an anonymous username generator
-                    authData.user.email = user.email;
-                    authData.user.username = user.email.substr(0, user.email.indexOf('@'))
-                    authData.user.question = user.question;
-                    authData.timestamp = Date.now();
-                    firebaseLogin.child('user').child(authData.user.username).set(authData);
-                    console.log(authData.username);
+                    authData.user.username = user.username;
+                    //authData.user.username = user.email.substr(0, user.email.indexOf('@'))
+                    user.timestamp = Date.now();
+                    firebaseLogin.child('user').child(authData.user.name).set(authData);
+                    firebaseLogin.child('questions').push(user);
                     cb(authData);
                 } else {
                     console.log('something went wrong');
