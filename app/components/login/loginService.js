@@ -24,7 +24,7 @@
                     authData.user.username = user.username;
                     //authData.user.username = user.email.substr(0, user.email.indexOf('@'))
                     user.timestamp = Date.now();
-                    firebaseLogin.child('user').child(authData.user.name).set(authData);
+                    firebaseLogin.child('user').child(authData.user.username).set(authData);
                     firebaseLogin.child('questions').push(user);
                     cb(authData);
                 } else {

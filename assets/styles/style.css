@@ -1,13 +1,16 @@
 #bdColor{
-    background-color: black;
-    background-image: url("../images/bcw2.png");
-    background-size: auto;
+    background-color: black !important;
+     background: fixed;
+}
+.item {
+    background:white;
+    width:440px;
+    padding-bottom:30px;
+    margin:0 auto 2em;
 }
 
-.card-media {
-  background-color: #999999; 
-  }
-  
-#cardColor{
-    background-color: whitesmoke;
+.itemhead {
+    padding:30px;
+    overflow:hidden;
+    position:relative;
 }

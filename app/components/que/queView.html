@@ -1,4 +1,4 @@
-<div>
+<!--<div>
     <md-content class="md-padding" layout="row" layout-wrap layout-align="center start" layout-xs="column">
         <div flex="50" flex-sm="100" flex-xs="100" layout="column" class="layout-column flex-xs-100 flex-sm-100 flex-50">
             <md-card id="cardColor" ng-repeat="question in queCtrl.questions">
@@ -18,4 +18,40 @@
             </md-card>
         </div>
     </md-content>
+</div>-->
+
+<!--<div class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content" ng-repeat="question in queCtrl.questions">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">^</button>
+        <h4 class="modal-title">{{ question.username }}</h4>
+      </div>
+      <div class="modal-body">
+        <p>{{ question.question }}</p>
+      </div>
+      <div class="modal-footer">
+        <a href="javascript:void(0)" class="btn btn-raised btn-danger">Close</a>
+        <a href="javascript:void(0)" class="btn btn-raised btn-success">Helped</a>
+      </div>
+    </div>
+  </div>
+</div>-->
+<div class="item" ng-repeat="question in queCtrl.questions">
+    <div class="itemhead">
+        <img src="/assets/images/bb8.png" width="70" height "70" />
+        <h2>{{question.username}}</h2>
+        <!--<div class="heart">
+            <svg viewBox="0 0 24 24" style="pointer-events: none; width: 24px; height: 24px; display: block;">
+                <g id="favorite">
+                    <path d="M12,21.4L10.6,20C5.4,15.4,2,12.3,2,8.5C2,5.4,4.4,3,7.5,3c1.7,0,3.4,0.8,4.5,2.1C13.1,3.8,14.8,3,16.5,3C19.6,3,22,5.4,22,8.5c0,3.8-3.4,6.9-8.6,11.5L12,21.4z"></path>
+                </g>
+            </svg>
+        </div>-->
+    </div>
+    <p>{{question.question}}</p>
+    <div>
+        <button></button>
+        <button></button>
+    </div>
 </div>
