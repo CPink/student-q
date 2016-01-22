@@ -5,8 +5,7 @@
     angular
         .module('studentQ', [
             'ui.router',
-            'firebase',
-            'ngMaterial'
+            'firebase'
         ]) 
         
     // constant to keep from hardcoding firebaseUrl throughout site

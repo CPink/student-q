@@ -1,21 +1,16 @@
-#bdColor{
+body{
     background-color: black !important;
-     background: fixed;
-}
-.item {
-    background:white;
-    width:440px;
-    padding-bottom:30px;
-    margin:0 auto 2em;
 }
 
-.itemhead {
-    background: white;
-    padding:30px;
-    overflow:hidden;
-    position:relative;
-}
-
-.ng-scope{
+body, html {
     height: 100%;
+    color: rgba(0,0,0,.87);
+    background: black;
+    position: relative;
+}
+
+.item {
+    color: black;
+    background:white;
+    margin-top: 1em;
 }

@@ -13,7 +13,7 @@
         //Creates an object using the Firebase Constructor with our endpoint passed in
         var firebaseLogin = new Firebase(firebaseUrl);
         // NEEDS TO TAKE THE USER INPUT (USERNAME) / REDIRECT THEM TO THE QUE VIEW ADD THEM TO THE QUE WAITING LIST
-         
+    
         //login method to be called from our controller. The callback is then passed the authenticated user
         //TO DO: refactor below functions to reduce how much is duplicated
         this.login = function (user, cb) {
